@@ -12,7 +12,7 @@ function ViewPlayerScreen({ route }) {
 
   const fetchPlayer = async () => {
     try {
-      const response = await axios.get(`https://sua-api.com/jogadoresdebasket/${id}`);
+      const response = await axios.get(`https://web-kzzvnxvgckc8.up-de-fra1-1.apps.run-on-seenode.com/jogador/${id}`);
       setPlayer(response.data);
     } catch (error) {
       console.error("Erro ao buscar jogador:", error);

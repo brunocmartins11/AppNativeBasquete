@@ -15,7 +15,7 @@ function EditPlayerScreen({ route, navigation }) {
 
   const fetchPlayer = async () => {
     try {
-      const response = await axios.get(`https://sua-api.com/jogadoresdebasket/${id}`);
+      const response = await axios.get(`https://web-kzzvnxvgckc8.up-de-fra1-1.apps.run-on-seenode.com/jogador${id}`);
       const player = response.data;
 
       setName(player.name);
@@ -29,7 +29,7 @@ function EditPlayerScreen({ route, navigation }) {
 
   const editPlayer = async () => {
     try {
-      await axios.put(`https://sua-api.com/jogadoresdebasket/${id}`, { name, position, height, current_team });
+      await axios.put(`https://web-kzzvnxvgckc8.up-de-fra1-1.apps.run-on-seenode.com/jogador${id}`, { name, position, height, current_team });
       navigation.goBack();
     } catch (error) {
       console.error("Erro ao editar jogador:", error);

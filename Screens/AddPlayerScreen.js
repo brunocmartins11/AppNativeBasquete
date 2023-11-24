@@ -10,7 +10,7 @@ function AddPlayerScreen({ navigation }) {
 
   const addPlayer = async () => {
     try {
-      await axios.post('https://sua-api.com/jogadoresdebasket', { name, position, height, current_team });
+      await axios.post('https://web-kzzvnxvgckc8.up-de-fra1-1.apps.run-on-seenode.com/jogador/', { name, position, height, current_team });
       navigation.goBack();
     } catch (error) {
       console.error("Erro ao adicionar jogador:", error);

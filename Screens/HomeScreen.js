@@ -12,7 +12,7 @@ function HomeScreen({ navigation }) {
 
   const fetchPlayers = async () => {
     try {
-      const response = await axios.get('https://sua-api.com/jogadoresdebasket');
+      const response = await axios.get('https://web-kzzvnxvgckc8.up-de-fra1-1.apps.run-on-seenode.com/jogador');
       setPlayers(response.data);
     } catch (error) {
       console.error("Erro ao buscar jogadores:", error);
@@ -61,7 +61,7 @@ function HomeScreen({ navigation }) {
               <Button
                 title="Remover"
                 onPress={async () => {
-                  await axios.delete(`https://sua-api.com/jogadoresdebasket/${item.id}`);
+                  await axios.delete(`https://web-kzzvnxvgckc8.up-de-fra1-1.apps.run-on-seenode.com/jogador/${item.id}`);
                   fetchPlayers();
                 }}
               />
